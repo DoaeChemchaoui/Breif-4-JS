@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #e6e6e6;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  color: #b22222;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+}
+
+.buttons {
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  margin: 0 5px;
+  font-size: 1em;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#addBtn { background: #28a745; }
+#editBtn { background: #007bff; }
+#deleteBtn { background: #dc3545; }
+
+button:hover {
+  opacity: 0.85;
+}
