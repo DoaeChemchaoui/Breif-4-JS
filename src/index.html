@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calendrier Hebdomadaire - Le Gourmet</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar Hebdomadaire - Le Gourmet</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Calendrier Hebdomadaire - Le Gourmet</h1>
-
-    <div class="buttons">
-      <button id="addBtn">Ajouter</button>
-      <button id="editBtn">Modifier</button>
-      <button id="deleteBtn">Supprimer</button>
-    </div>
-
+    <h1>Calendar Hebdomadaire - Le Gourmet</h1>
     <div class="calendar" id="calendar"></div>
   </div>
 
@@ -25,20 +18,9 @@
       <h2 id="modalTitle">Ajouter une Réservation</h2>
       <form id="reservationForm">
         <label>Nom du client :</label>
-        <input type="text" id="name" required />
-
-        <label>Jour :</label>
-        <select id="day" required>
-          <option value="Lundi">Lundi</option>
-          <option value="Mardi">Mardi</option>
-          <option value="Mercredi">Mercredi</option>
-          <option value="Jeudi">Jeudi</option>
-          <option value="Vendredi">Vendredi</option>
-        </select>
-
-        <label>Heure :</label>
-        <select id="time" required></select>
-
+        <input type="text" id="name" required>
+        <input type="hidden" id="day">
+        <input type="hidden" id="hour">
         <div class="actions">
           <button type="submit">Enregistrer</button>
           <button type="button" id="cancel">Annuler</button>
