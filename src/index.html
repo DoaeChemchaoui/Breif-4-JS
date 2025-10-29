@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendrier des Réservations - Le Gourmet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calendrier des Réservations - Le Gourmet</h1>
+
+      <div class="buttons">
+        <button id="addBtn">Ajouter</button>
+        <button id="editBtn">Modifier</button>
+        <button id="deleteBtn">Supprimer</button>
+      </div>
+
+      <div class="calendar">
+        <div class="weekdays">
+          <div class="day">Lundi</div>
+          <div class="day">Mardi</div>
+          <div class="day">Mercredi</div>
+          <div class="day">Jeudi</div>
+          <div class="day">Vendredi</div>
+          <div class="day weekend">Samedi</div>
+          <div class="day weekend">Dimanche</div>
+        </div>
+
+        <div class="reservations" id="reservations"></div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <h2 id="modalTitle">Ajouter une Réservation</h2>
+        <form id="reservationForm">
+          <label>Nom du client :</label>
+          <input type="text" id="name" required />
+
+          <label>Jour :</label>
+          <select id="day" required>
+            <option value="Lundi">Lundi</option>
+            <option value="Mardi">Mardi</option>
+            <option value="Mercredi">Mercredi</option>
+            <option value="Jeudi">Jeudi</option>
+            <option value="Vendredi">Vendredi</option>
+          </select>
+
+          <label>Heure :</label>
+          <input type="time" id="time" required />
+
+          <div class="actions">
+            <button type="submit">Enregistrer</button>
+            <button type="button" id="cancel">Annuler</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
