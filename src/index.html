@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendar Hebdomadaire - Le Gourmet</title>
+  <title>Calendrier Hebdomadaire - Le Gourmet</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Calendar Hebdomadaire - Le Gourmet</h1>
+    <h1>Calendrier Hebdomadaire - Le Gourmet</h1>
     <div class="calendar" id="calendar"></div>
   </div>
 
@@ -19,8 +19,28 @@
       <form id="reservationForm">
         <label>Nom du client :</label>
         <input type="text" id="name" required>
+
+        <label>Heure de début :</label>
+        <input type="time" id="startTime" required>
+
+        <label>Heure de fin :</label>
+        <input type="time" id="endTime" required>
+
+        <label>Nombre de personnes :</label>
+        <input type="number" id="people" min="1" required>
+
+        <label>Type de réservation :</label>
+        <select id="type" required>
+          <option value="">Choisir...</option>
+          <option value="standard">Standard</option>
+          <option value="vip">VIP</option>
+          <option value="anniversaire">Anniversaire</option>
+          <option value="groupe">Groupe</option>
+        </select>
+
         <input type="hidden" id="day">
         <input type="hidden" id="hour">
+
         <div class="actions">
           <button type="submit">Enregistrer</button>
           <button type="button" id="cancel">Annuler</button>
