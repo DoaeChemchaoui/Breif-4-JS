@@ -1,9 +1,9 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: cursive;
   background: #f3f3f3;
   margin: 0;
   padding: 20px;
-  text-align: center;
+
 }
 
 .container {
@@ -13,11 +13,19 @@ body {
   border-radius: 16px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 30px;
+
+}
+button{
+  background-color: #2b2424;
+  margin-bottom: 10px;
+  font-family: cursive;
+  opacity: 6px;
 }
 
 h1 {
-  color: #b22222;
+  color:#170662;
   margin-bottom: 25px;
+  text-align: center;
 }
 
 .calendar {
@@ -33,7 +41,7 @@ h1 {
 .header div {
   font-weight: bold;
   padding: 10px;
-  background: #b22222;
+  background: rgb(127, 0, 70);
   color: white;
   border: 1px solid #ddd;
 }
