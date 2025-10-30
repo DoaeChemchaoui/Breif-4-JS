@@ -11,6 +11,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  background: #f3f3
   background: #fff;
   border-radius: 16px;
   padding: 30px;
+  text-align: center;
 
 }
 
@@ -135,10 +136,10 @@ button:hover { opacity: 0.85; }
   padding: 12px 25px;
   font-size: 1.1em;
   cursor: pointer;
-  transition: 0.3s;  display: inline-block;
+  transition: 0.3s;  
   margin-bottom: 20px;
 }
 
 #addReservationBtn:hover {
-  background-color: #ff0000;
+  background-color: #e10b0b;
 }

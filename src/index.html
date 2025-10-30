@@ -10,6 +10,10 @@
   <div class="container">
     <h1>Calendrier Hebdomadaire - Le Gourmet</h1>
 
+  <!-- Affichage date + timer -->
+  <div id="dateTimer" style="text-align:center; font-size:1.2em; margin-bottom:15px; color:#000000; font-weight:bold;">
+    <!-- JS remplira la date et l'heure ici -->
+  </div>
 
     <!-- Bouton Ajouter une réservation -->
     <button id="addReservationBtn">+ Ajouter une réservation</button>
@@ -65,5 +69,27 @@
       </form>
     </div>
   </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+<script>
+  const dateTimer = document.getElementById('dateTimer');
+
+  function updateDateTime() {
+    const now = new Date();
+    const day = String(now.getDate()).padStart(2, '0');
+    const month = String(now.getMonth() + 1).padStart(2, '0'); // mois commence à 0
+    const year = now.getFullYear();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+
+    dateTimer.textContent = `${day}/${month}/${year} - ${hours}:${minutes}:${seconds}`;
+  }
+
+  // Met à jour toutes les secondes
+  setInterval(updateDateTime, 1000);
+  updateDateTime(); // mise à jour immédiate au chargement
+</script>
 </body>
 </html>
