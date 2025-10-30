@@ -9,8 +9,12 @@
 <body>
   <div class="container">
     <h1>Calendrier Hebdomadaire - Le Gourmet</h1>
-    <!-- <button href="#Ajouter-une-reservation" >Ajouter Une Réservation</button> -->
 
+
+    <!-- Bouton Ajouter une réservation -->
+    <button id="addReservationBtn">+ Ajouter une réservation</button>
+
+    <!-- Calendrier -->
     <div class="calendar" id="calendar">
       <div class="header">
         <div>Heure</div>
@@ -22,28 +26,30 @@
         <div class="disabled">Samedi</div>
         <div class="disabled">Dimanche</div>
       </div>
-      <div class="body" id="calendarBody"></div>
+      <div class="body" id="calendarBody">
+        <!-- Les lignes du calendrier seront générées par JS -->
+      </div>
     </div>
   </div>
 
-  <!-- Modal -->
+  <!-- Modal de réservation -->
   <div class="modal" id="modal">
     <div class="modal-content">
-      <h2 id="modalTitle">Ajouter une Réservation</h2>
+      <h2 id="modalTitle">Ajouter une réservation</h2>
       <form id="reservationForm">
-        <label>Nom du client :</label>
+        <label for="name">Nom du client :</label>
         <input type="text" id="name" required>
 
-        <label>Heure de début :</label>
+        <label for="startTime">Heure de début :</label>
         <input type="time" id="startTime" required>
 
-        <label>Heure de fin :</label>
+        <label for="endTime">Heure de fin :</label>
         <input type="time" id="endTime" required>
 
-        <label>Nombre de personnes :</label>
+        <label for="people">Nombre de personnes :</label>
         <input type="number" id="people" min="1" required>
 
-        <label>Type de réservation :</label>
+        <label for="type">Type de réservation :</label>
         <select id="type" required>
           <option value="">-- Choisir un type --</option>
           <option value="standard">Standard</option>
@@ -59,7 +65,5 @@
       </form>
     </div>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
