@@ -9,7 +9,21 @@
 <body>
   <div class="container">
     <h1>Calendrier Hebdomadaire - Le Gourmet</h1>
-    <div class="calendar" id="calendar"></div>
+    <a href="#Ajouter-une-reservation">Ajouter</a>
+
+    <div class="calendar" id="calendar">
+      <div class="header">
+        <div>Heure</div>
+        <div>Lundi</div>
+        <div>Mardi</div>
+        <div>Mercredi</div>
+        <div>Jeudi</div>
+        <div>Vendredi</div>
+        <div class="disabled">Samedi</div>
+        <div class="disabled">Dimanche</div>
+      </div>
+      <div class="body" id="calendarBody"></div>
+    </div>
   </div>
 
   <!-- Modal -->
@@ -31,15 +45,12 @@
 
         <label>Type de réservation :</label>
         <select id="type" required>
-          <option value="">Choisir...</option>
+          <option value="">-- Choisir un type --</option>
           <option value="standard">Standard</option>
           <option value="vip">VIP</option>
-          <option value="anniversaire">Anniversaire</option>
           <option value="groupe">Groupe</option>
+          <option value="anniversaire">Anniversaire</option>
         </select>
-
-        <input type="hidden" id="day">
-        <input type="hidden" id="hour">
 
         <div class="actions">
           <button type="submit">Enregistrer</button>

@@ -1,116 +1,123 @@
 body {
-  font-family: "Poppins", sans-serif;
-  background: #f0f2f5;
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
   margin: 0;
-  padding: 0;
+  padding: 20px;
+  text-align: center;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 30px auto;
+  max-width: 1100px;
+  margin: 40px auto;
   background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 
-h1 { text-align: center; margin-bottom: 20px; color: #8c2626; }
+h1 {
+  color: #b22222;
+  margin-bottom: 25px;
+}
 
 .calendar {
+  width: 100%;
+}
+
+.header, .row {
   display: grid;
-  grid-template-columns: 80px repeat(7, 1fr);
-  grid-auto-rows: 50px;
-  border: 1px solid #ccc;
-}
-
-.calendar .time-label {
-  background: #f7f7f7;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  grid-template-columns: 100px repeat(7, 1fr);
   text-align: center;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9em;
 }
 
-.calendar .day-label {
-  background: #f7f7f7;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  text-align: center;
+.header div {
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 10px;
+  background: #b22222;
+  color: white;
+  border: 1px solid #ddd;
 }
 
-.calendar .cell {
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  position: relative;
+.cell {
+  border: 1px solid #ddd;
+  height: 50px;
   cursor: pointer;
+  position: relative;
+  transition: background 0.3s;
 }
 
-.calendar .cell.disabled { background: #eee;  }
+.cell:hover {
+  background: #f8d7da;
+}
+
+.cell.disabled {
+  background: #ccc;
+   pointer-events: none; /*ENLEVER LA SOURIRS QUI SERT A CLIQUER */
+}
+
+.time {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  padding-top: 12px;
+  font-weight: bold;
+}
 
 .event {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
-  background: #ff6b6b;
   color: #fff;
   border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9em;
-  text-align: center;
-  padding: 2px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 13px;
   cursor: pointer;
 }
-
-.event.color1 { background: #1abc9c; }
-.event.color2 { background: #3498db; }
-.event.color3 { background: #9b59b6; }
-.event.color4 { background: #e67e22; }
 
 .modal {
   display: none;
   position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
   justify-content: center;
   align-items: center;
 }
 
 .modal-content {
-  background: #fff;
-  border-radius: 10px;
-  width: 300px;
+  background: white;
   padding: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  width: 320px;
 }
 
-.modal-content h2 { text-align: center; margin-bottom: 15px; color: #333; }
+label {
+  font-weight: bold;
+  text-align: left;
+  display: block;
+  margin-top: 8px;
+}
 
-.modal-content form { display: flex; flex-direction: column; gap: 10px; }
-
-.modal-content input { padding: 6px; border-radius: 5px; border: 1px solid #ccc; }
-
-.actions { display: flex; justify-content: space-between; }
-
-.actions button {
-  flex: 1;
-  margin: 0 5px;
+input, select {
+  width: 100%;
   padding: 6px;
   border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
   border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 1em;
+  color: white;
   cursor: pointer;
 }
 
-.actions button:first-child { background: #28a745; color: #fff; }
-.actions button:last-child { background: #dc3545; color: #fff; }
+button[type="submit"] { background: #28a745; }
+#cancel { background: #dc3545; }
+
+button:hover { opacity: 0.85; }
