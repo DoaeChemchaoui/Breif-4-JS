@@ -77,12 +77,13 @@ h1 {
 
 .cell:hover {
   background: linear-gradient(135deg, #f8e7f3, #f1e3fa);
+  
 }
 
 .cell.disabled {
   background: #8785a3;
-  pointer-events: none;
   opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .time {
@@ -91,23 +92,21 @@ h1 {
   padding-top: 14px;
   font-weight: bold;
   color: #7d1da4;
+  border-radius: 10px;
 }
 
 /* ======== EVENTS ======== */
 .event {
   color: #fff;
   border-radius: 8px;
-  padding: 6px 10px;
+  padding: 16px 10px;
   margin: 5px auto;
   font-size: 13px;
   display: inline-block;
   transition: 0.25s;
 }
 
-.event:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
+
 
 /* ======== MODAL ======== */
 .modal {
@@ -128,7 +127,6 @@ h1 {
   border-radius: 20px;
   width: 90%;
   max-width: 420px;
-  box-shadow: 0 10px 25px rgba(166, 38, 110, 0.2);
   text-align: center;
   animation: fadeIn 0.3s ease;
 }
@@ -158,13 +156,12 @@ h1 {
   border-radius: 8px;
   border: 1px solid #d1b5d8;
   font-size: 14px;
-  transition: border-color 0.2s, box-shadow 0.2s;
+
 }
 
 .form-group input:focus,
 .form-group select:focus {
   border-color: #a6266e;
-  box-shadow: 0 0 0 3px rgba(166, 38, 110, 0.25);
   outline: none;
 }
 
@@ -192,7 +189,6 @@ h1 {
 
 .submit-btn:hover {
   background: linear-gradient(135deg, #7d1da4, #c43e87);
-  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.4);
 }
 
 .cancel-btn {
@@ -202,7 +198,6 @@ h1 {
 
 .cancel-btn:hover {
   background: #c13d70;
-  box-shadow: 0 4px 10px rgba(193, 61, 112, 0.3);
 }
 
 @keyframes fadeIn {
@@ -246,7 +241,6 @@ h1 {
   display: inline-block;
   margin-right: 5px;
   border: 2px solid #fff;
-  box-shadow: 0 0 6px rgba(0,0,0,0.1);
 }
 
 .standard { background: #28a745; }
