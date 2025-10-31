@@ -204,7 +204,7 @@ h1 {
   font-size: 14px;
 }
 
-.dot { /* Rond pour chaque type */
+.legende { /* Rond pour chaque type */
   width: 14px;
   height: 14px;
   border-radius: 50%;
@@ -218,7 +218,7 @@ h1 {
 .groupe { background: #0275d8; }
 .anniversaire { background: #f0ad4e; }
 
-#currentMonth {
+#Month {
   text-align:center;
   font-size:1.3em;
   margin-bottom:15px;
