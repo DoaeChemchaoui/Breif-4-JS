@@ -10,7 +10,7 @@
   <div class="container">
     <h1>Calendrier Hebdomadaire - Le Gourmet</h1>
 
-    <!-- 🟢 Légende simple -->
+    <!-- Légende simple -->
     <div class="legend">
       <span class="dot standard"></span> Standard
       <span class="dot vip"></span> VIP
@@ -18,7 +18,15 @@
       <span class="dot anniversaire"></span> Anniversaire
     </div>
 
-    <!-- 🗓️ Calendrier -->
+    <div id="dateTimer" style="text-align:center; font-size:1.2em; margin-bottom:15px; color:#000000; font-weight:bold;">
+    <!-- JS remplira la date et l'heure ici -->
+    </div>
+<div class="calendar-nav">
+  <button class="nav-btn" id="prevWeek">← Précédent</button>
+  <button class="nav-btn" id="nextWeek">Suivant →</button>
+</div>
+
+    <!--  Calendrier -->
     <div class="calendar" id="calendar">
       <div class="header">
         <div>Heure</div>
@@ -36,7 +44,7 @@
     </div>
   </div>
 
- <!-- 🪟 Modal de réservation -->
+ <!--  Modal de réservation -->
 <div class="modal" id="modal">
   <div class="modal-content">
     <h2 id="modalTitle">Ajouter une réservation</h2>
