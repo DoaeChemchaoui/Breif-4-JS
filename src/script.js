@@ -6,13 +6,17 @@ const title = document.getElementById("modalTitle");
 
 let selectedCell = null;
 
+const currentMonth = document.getElementById("currentMonth");
 
-const dateTimer = document.getElementById('dateTimer');
-
-setInterval(() => {
-  const d = new Date();
-  dateTimer.textContent = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
-}, 1000);
+function updateMonthDisplay(date) {
+  const months = [
+    "Janvier","Février","Mars","Avril","Mai","Juin",
+    "Juillet","Août","Septembre","Octobre","Novembre","Décembre"
+  ];
+  currentMonth.textContent = months[date.getMonth()] + " " + date.getFullYear();
+}
+const today = new Date();
+updateMonthDisplay(today);
 
 
 const hours = ["08:00",
