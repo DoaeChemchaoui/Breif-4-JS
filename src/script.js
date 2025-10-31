@@ -66,19 +66,17 @@ function openModal(cell){
   selectedCell = cell; // On garde la cellule sélectionnée
   modal.style.display = "flex"; // Affiche le modal
 
-  if(editingEvent){ 
-    // Pré-remplir le formulaire si on modifie
-    const text = editingEvent.textContent;
-    const parts = text.split(/[\(\)-]/);
-    document.getElementById("name").value = parts[0];
-    document.getElementById("startTime").value = parts[1];
-    document.getElementById("endTime").value = parts[2];
+    if(editingEvent){ 
+    document.getElementById("name").value = editingEvent.dataset.name;
+    document.getElementById("startTime").value = editingEvent.dataset.start;
+    document.getElementById("endTime").value = editingEvent.dataset.end;
     document.getElementById("type").value = editingEvent.dataset.type;
     title.textContent = "Modifier la réservation";
-  } else {
-    form.reset(); // Nouveau formulaire vide
-    title.textContent = "Ajouter une réservation";
-  }
+    } else {
+      form.reset();
+      title.textContent = "Ajouter une réservation";
+    }
+
 }
 
 // ==== Fermer modal ====
