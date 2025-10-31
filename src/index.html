@@ -10,15 +10,15 @@
   <div class="container">
     <h1>Calendrier Hebdomadaire - Le Gourmet</h1>
 
-  <!-- Affichage date + timer -->
-  <div id="dateTimer" style="text-align:center; font-size:1.2em; margin-bottom:15px; color:#000000; font-weight:bold;">
-    <!-- JS remplira la date et l'heure ici -->
-  </div>
+    <!-- 🟢 Légende simple -->
+    <div class="legend">
+      <span class="dot standard"></span> Standard
+      <span class="dot vip"></span> VIP
+      <span class="dot groupe"></span> Groupe
+      <span class="dot anniversaire"></span> Anniversaire
+    </div>
 
-    <!-- Bouton Ajouter une réservation -->
-    <button id="addReservationBtn">+ Ajouter une réservation</button>
-
-    <!-- Calendrier -->
+    <!-- 🗓️ Calendrier -->
     <div class="calendar" id="calendar">
       <div class="header">
         <div>Heure</div>
@@ -36,23 +36,32 @@
     </div>
   </div>
 
-  <!-- Modal de réservation -->
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <h2 id="modalTitle">Ajouter une réservation</h2>
-      <form id="reservationForm">
+ <!-- 🪟 Modal de réservation -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h2 id="modalTitle">Ajouter une réservation</h2>
+    <form id="reservationForm">
+      <div class="form-group">
         <label for="name">Nom du client :</label>
         <input type="text" id="name" required>
+      </div>
 
+      <div class="form-group">
         <label for="startTime">Heure de début :</label>
         <input type="time" id="startTime" required>
+      </div>
 
+      <div class="form-group">
         <label for="endTime">Heure de fin :</label>
         <input type="time" id="endTime" required>
+      </div>
 
+      <div class="form-group">
         <label for="people">Nombre de personnes :</label>
         <input type="number" id="people" min="1" required>
+      </div>
 
+      <div class="form-group">
         <label for="type">Type de réservation :</label>
         <select id="type" required>
           <option value="">-- Choisir un type --</option>
@@ -61,35 +70,17 @@
           <option value="groupe">Groupe</option>
           <option value="anniversaire">Anniversaire</option>
         </select>
+      </div>
 
-        <div class="actions">
-          <button type="submit">Enregistrer</button>
-          <button type="button" id="cancel">Annuler</button>
-        </div>
-      </form>
-    </div>
+      <div class="actions">
+        <button type="submit" class="btn submit-btn">Enregistrer</button>
+        <button type="button" class="btn cancel-btn" id="cancel">Annuler</button>
+      </div>
+    </form>
   </div>
+</div>
 
   <!-- JS -->
   <script src="script.js"></script>
-<script>
-  const dateTimer = document.getElementById('dateTimer');
-
-  function updateDateTime() {
-    const now = new Date();
-    const day = String(now.getDate()).padStart(2, '0');
-    const month = String(now.getMonth() + 1).padStart(2, '0'); // mois commence à 0
-    const year = now.getFullYear();
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
-
-    dateTimer.textContent = `${day}/${month}/${year} - ${hours}:${minutes}:${seconds}`;
-  }
-
-  // Met à jour toutes les secondes
-  setInterval(updateDateTime, 1000);
-  updateDateTime(); // mise à jour immédiate au chargement
-</script>
 </body>
 </html>

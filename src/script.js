@@ -1,16 +1,17 @@
-// === Sélection des éléments principaux ===
+// === Sélection des éléments ===
 const calendarBody = document.getElementById("calendarBody");
 const modal = document.getElementById("modal");
 const form = document.getElementById("reservationForm");
 const cancelBtn = document.getElementById("cancel");
 const title = document.getElementById("modalTitle");
 
-let selectedCell = null; // cellule actuellement sélectionnée
+let selectedCell = null;
 
-// === Liste des heures ===
+// === Heures affichées ===
 const hours = [
-  "09:00", "10:00", "11:00", "12:00","13:00", "14:00", "15:00", "16:00",
-   "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"
+  "09:00", "10:00", "11:00", "12:00", "13:00", "14:00",
+  "15:00", "16:00", "17:00", "18:00", "19:00", "20:00",
+   "21:00", "22:00", "23:00", "00:00"
 ];
 
 // === Création du calendrier ===
@@ -74,25 +75,7 @@ cancelBtn.addEventListener("click", () => {
   form.reset();
 });
 
-// === Bouton "Ajouter une réservation" ===
-const addBtn = document.getElementById("addReservationBtn");
-
-// Quand on clique sur le bouton → ouvrir le formulaire pour la cellule sélectionnée
-addBtn.addEventListener("click", () => {
-  // Vérifie qu'une cellule a bien été sélectionnée (jour + heure)
-  if (!selectedCell) {
-    alert("Cliquez d'abord sur la case du jour et de l'heure souhaitée.");
-    return;
-  }
-
-  // Ouvre le modal de réservation
-  form.reset();
-  document.getElementById("modalTitle").textContent = "Ajouter une Réservation";
-  modal.style.display = "flex";
-});
-
-
-// === Enregistrer la réservation ===
+// === Soumission du formulaire ===
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -147,5 +130,5 @@ function addReservation(info) {
   selectedCell.appendChild(event);
 }
 
-// === Lancer le calendrier au chargement ===
+// === Initialisation ===
 createCalendar();
