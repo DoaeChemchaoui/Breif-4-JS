@@ -248,7 +248,7 @@ h1 {
 .groupe { background: #0275d8; }
 .anniversaire { background: #f0ad4e; }
 
-#dateTimer {
+#currentMonth {
   text-align:center;
   font-size:1.3em;
   margin-bottom:15px;
